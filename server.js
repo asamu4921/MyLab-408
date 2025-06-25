@@ -46,6 +46,18 @@ app.use('/users', cekLogin, require('./users/create'));
 app.use('/users', cekLogin, require('./users/edit'));
 app.use('/users', cekLogin, require('./users/update'));
 app.use('/users', cekLogin, require('./users/delete'));
+app.use('/api', cekLogin, require('./api/indeks'));
+app.use('/api', cekLogin, require('./api/create'));
+app.use('/api', cekLogin, require('./api/edit'));
+app.use('/api', cekLogin, require('./api/update'));
+app.use('/api', cekLogin, require('./api/delete'));
+app.use('/matkul', cekLogin, require('./matkul/indeks'));
+app.use('/matkul', cekLogin, require('./matkul/create'));
+app.use('/matkul', cekLogin, require('./matkul/edit'));
+app.use('/matkul', cekLogin, require('./matkul/update'));
+app.use('/matkul', cekLogin, require('./matkul/delete'));
+
+
 
 const PORT = 3005;
 app.listen(PORT, () => console.log(`Server jalan di http://localhost:${PORT}`));
